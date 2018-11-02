@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TravelportApp</string>
+    <string name="api_id"></string>
+    <string name="kelvin_to_celsius">-273.15</string>
+</resources>
