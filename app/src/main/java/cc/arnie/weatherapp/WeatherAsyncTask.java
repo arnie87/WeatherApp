@@ -60,7 +60,7 @@ public class WeatherAsyncTask extends AsyncTask<Void, Void, Void> {
             String purpose = "weather";
 
             switch (context.getClass().getSimpleName()) {
-                case "MainActivity":
+                case "CurrentWeatherActivity":
                     purpose = "weather";
                     break;
                 case "ForecastActivity":
@@ -76,7 +76,7 @@ public class WeatherAsyncTask extends AsyncTask<Void, Void, Void> {
 
             if (jsonStr != null) {
                 switch (context.getClass().getSimpleName()) {
-                    case "MainActivity":
+                    case "CurrentWeatherActivity":
                         createCurrentWeatherObjectList(jsonStr);
                         break;
                     case "ForecastActivity":
@@ -96,7 +96,7 @@ public class WeatherAsyncTask extends AsyncTask<Void, Void, Void> {
         super.onPostExecute(aVoid);
 
         switch (context.getClass().getSimpleName()) {
-            case "MainActivity":
+            case "CurrentWeatherActivity":
                 listView.setAdapter(new CurrentWeatherListAdapter(context, currentWeatherObjectList));
                 break;
             case "ForecastActivity":
